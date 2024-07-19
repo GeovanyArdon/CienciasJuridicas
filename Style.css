@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Raleway:ital,wght@1,300&display=swap');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
+
+:root {
+    --blanco: #ffffff
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.4%;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: large;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 7rem;
+    line-height: 8rem;
+    color: #ffffff;
+    text-transform: uppercase;
+
+}
+
+
+body {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.imagenInicio {
+    height: 90rem;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("Img/principal.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+.imagenInicioOrganigrama {
+    height: 90rem;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("Img/organigramaPortada.png");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.inicio__informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+@media (max-width:760px) {
+    .inicio__informacion h1{
+        justify-content: center;
+        align-items: center;
+        font-size: 400%;
+        text-align: center;
+    }
+}
+
+
+.inicio__informacion p {
+    margin-top: 7rem;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    color: #ffffff;
+    font-size: 2.5rem;
+    align-items: center;
+    width: 80%;
+
+}
+
+
+
+
+
+
+
+.inicio__informacion {
+    margin: 0 auto;
+}
+
+
+/* Aqui estan todas las funciones y porpiedaeds del menu */
+.menu ul {
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu>ul {
+    background-color: #ffffff;
+    /* Color de fondo del menú principal */
+}
+
+.menu>ul li {
+    float: left;
+}
+
+.menu ul li a {
+
+    display: inline-block;
+    color: #333333;
+    /* Color del texto del menú principal */
+
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+
+    background-color: #cccccc;
+    /* Color de fondo al pasar el mouse sobre el menú principal */
+}
+
+.menu .dropdown-content {
+
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    /* Color de fondo del menú desplegable */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu .dropdown-content li {
+
+    display: block;
+    clear: both;
+    width: 100%;
+}
+
+.menu .dropdown-content a {
+
+    color: #333333;
+    /* Color del texto del menú desplegable */
+    padding: 12px 16px;
+    display: block;
+}
+
+.menu .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    /* Color de fondo al pasar el mouse sobre el menú desplegable */
+}
+
+.menu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu>ul {
+        flex-direction: column;
+    }
+
+    .menu>ul li {
+        flex: none;
+        width: 100%;
+
+    }
+
+    .historia__imagen {
+        height: 30rem;
+        /* Ajusta la altura de la imagen para pantallas pequeñas */
+    }
+
+    .menu .dropdown-content {
+        position: static;
+        /* Permite que el dropdown ocupe el espacio del flujo del documento en pantallas pequeñas */
+        box-shadow: none;
+        /* Elimina la sombra para pantallas pequeñas */
+    }
+}
+
+.LogoUca {
+    height: 80px;
+    /* Ajusta la altura de la imagen según tu diseño */
+    width: auto;
+    /* Mantén la proporción de la imagen */
+    padding: 14px 10px;
+
+}
+
+h2 {
+    font-style: italic;
+    letter-spacing: 5px;
+    font-size: 30px;
+    padding: 30px;
+    text-align: center;
+    font-weight: 400;
+}
+
+footer {
+    margin-top: 10rem;
+    background-color: #003c71;
+    /* Color de fondo del pie de página */
+    width: 100%;
+    padding: 5%;
+}
+
+
+p.weare {
+    background-color: hsl(0, 0%, 100%);
+    letter-spacing: 5px;
+    padding: 30px;
+    font-size: 25px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p.informacionFooter {
+    margin: auto;
+    font-size: medium;
+    color: #cccccc;
+}
+
+/* Contenedores del Nav Bar - Se dividen en dos uno el logo de la uca y el otro de los enlaces */
+.contenedor {
+    background-color: #ffffff;
+    display: inline-block;
+    /* Cambiamos a inline-block para que se alineen horizontalmente */
+    margin-right: 30px;
+
+    /* Espacio entre contenedores */
+}
+
+.contenido {
+    padding: 10px;
+}
+
+.separador {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 30px;
+}
+
+
+.bienvenida_informacion {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 4rem;
+    margin: 5rem auto;
+    gap: 7rem;
+}
+
+.bienvenida_informacion_maestria {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 4rem;
+    margin: 5rem auto;
+    gap: 7rem;
+}
+
+.bienvenida_informacion_radio {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 4rem;
+    margin: 5rem auto;
+    gap: 7rem;
+}
+
+@media (max-width:760px) {
+    .bienvenida_informacion {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width:760px) {
+    .bienvenida_informacion_maestria{
+        grid-template-columns: 100%;
+    }
+}
+
+
+@media (max-width:760px) {
+    .bienvenida_informacion_radio{
+        grid-template-columns: 100%;
+    }
+}
+
+
+
+
+.bienvenida__texto {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 4rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    color: #000000;
+    font-weight: 500;
+    animation: fadeInUp 2s ease;
+}
+
+.bienvenida__texto2 {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    animation: fadeInUp 2s ease;
+}
+
+.bienvenida__texto3 {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    animation: fadeInUp 2s ease;
+}
+
+
+
+.radio__texto {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 4rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    font-weight: 500;
+    animation: fadeInUp 2s ease;
+}
+
+.radio__texto2 {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    animation: fadeInUp 2s ease;
+}
+
+
+.radio__texto3 {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: bold;
+    animation: fadeInUp 2s ease;
+}
+
+.radio_titulo h2{
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 0;
+    animation: fadeInUp 2s ease;
+    text-align: left;
+    margin-left: 5%;
+    width: 30%;
+}
+
+
+.linea__separadora__blanca{
+
+    height: 0.5rem;
+    background-color: #ffefef;
+    width: 85%;
+    margin: 2rem auto;
+
+}
+
+
+
+.contenedor img {
+    flex: 1;
+    margin-right: 10px;
+    border-radius: 10px;
+    animation: fadeInRight 2s ease;
+}
+
+@media screen and (max-width: 768px) {
+
+    .bienvenida_informacion {
+        width: 90%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+    }
+
+    .bienvenida_imagen {
+        width: 100%;
+    }
+
+    .texto {
+        width: 100%;
+        margin: 35px 0px;
+        font-size: 15px;
+    }
+
+
+
+}
+
+
+
+
+.bienvenida_informacion button {
+    display: inline-block;
+    background-color: #003c71;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 30px;
+    /* Mueve el botón hacia la derecha todo lo posible */
+}
+
+.bienvenida_informacion button:hover {
+    background-color: #666;
+    transform: scale(1, 1);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.box {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+.box img {
+    width: 80%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.overlay {
+    height: 0;
+    width: 150px;
+    background: linear-gradient(transparent, #ffffff 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+
+.overlay h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+.overlay a {
+    margin-top: 10px;
+    color: #1c1c1c;
+    text-decoration: none;
+    background: #cccccc;
+    font-size: 14px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.box:hover img {
+    transform: scale(1.2);
+}
+
+.box:hover .overlay {
+    height: 100%;
+}
+
+
+.historia__imagen {
+    background-image: url(Img/historia.jpg);
+    /* Asegúrate de especificar la ruta correcta a tu imagen */
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    background-position: center;
+    /* Centra la imagen en el contenedor */
+    position: relative;
+    height: 50rem;
+    margin-bottom: 2rem;
+}
+
+/*  Aqui centramos toda la informacion de la historia */
+.historia__informacion {
+    width: 55%;
+    margin: 0 auto;
+}
+
+
+/* Aqui hacemos la linea debajo del titulo */
+
+.historia_titulo h2 {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 4rem;
+    margin: none;
+    padding: none;
+}
+
+
+/* Linea negra que va debajo del titulo */
+.historia__linea {
+    background-color: #1c1c1c;
+    margin: 0 auto;
+    width: 15rem;
+    height: 5px;
+    margin-bottom: 5rem;
+}
+
+/* Propiedades del texto de historia */
+.historia__texto p {
+    font-family: 'Arial', sans-serif;
+    /* Ajusta la fuente según sea necesario */
+    font-size: 2rem;
+    /* Tamaño de fuente del título */
+    line-height: 2;
+    /* Separación entre líneas del título */
+    margin-bottom: 1rem;
+    /* Espacio debajo del título */
+}
+
+.historia__mapa {
+    background-image: url(Img/mapa.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 100%;
+}
+
+
+
+.organigrama__imagen {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* Centra la imagen en el contenedor */
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.organigrama__titulo {
+    background-color: #003c71;
+}
+
+.organigrama__titulo h2 {
+    color: #ffffff;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 6rem;
+}
+
+.radio {
+    height: 50rem;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("Img/radio2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.radio__informacion p {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 5rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    animation: fadeInUp 2s ease;
+}
+
+.fondo_negro {
+    padding-top: 5rem;
+    background-color: #000000;
+
+}
+
+
+.main_card {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 2rem;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.card {
+    width: 40rem;
+    height: 60rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+
+    img {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.9;
+        transition: opacity .2s ease-out;
+    }
+
+    h2 {
+        position: absolute;
+        inset: auto auto 30px 30px;
+        margin: 0;
+        transition: inset .3s .3s ease-out;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+
+    }
+
+    p,
+    a {
+        position: absolute;
+        opacity: 0;
+        max-width: 80%;
+        transition: opacity .3s ease-out;
+    }
+
+    p {
+        inset: auto auto 80px 30px;
+    }
+
+    a {
+        inset: auto auto 40px 30px;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &:hover h2 {
+        inset: auto auto 220px 30px;
+        transition: inset .3s ease-out;
+    }
+
+    &:hover p,
+    &:hover a {
+        opacity: 1;
+        transition: opacity .5s .1s ease-in;
+    }
+
+    &:hover img {
+        transition: opacity .3s ease-in;
+        opacity: 1;
+    }
+
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+}
+
+.contenedor_organigrama {
+    width: 90%;
+    gap: 4rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10rem auto;
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+.animacion {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+
+.linea__separadora{
+    height: 0.5rem;
+    background-color: #000000;
+    width: 85%;
+    margin: 2rem auto;
+}
+
+
+.maestria_titulo h2{
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-weight: 0;
+    animation: fadeInUp 2s ease;
+    text-align: left;
+    margin-left: 5%;
+    width: 30%;
+}
+
+
+.eventos_titulo h2{
+
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-weight: 0;
+    animation: fadeInUp 2s ease;
+    text-align: right;
+    margin-right: 5%;
+    width: 90%;
+
+}
+.slide{
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    overflow: hidden;
+
+}
+.slide ul{
+    display: flex;
+    padding: 0;
+    width: 200%;
+    animation: slide 5s infinite cubic-bezier(0.55, 0.48, 0.37, 0.92);
+}
+
+@keyframes slide{
+    0%{margin-left: 0;}
+    25%{margin-left: -100;}
+
+    75%{margin-left: -140%;}
+    100%{margin-left: 0;}
+
+    
+
+}
