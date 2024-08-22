@@ -29,6 +29,9 @@ h1 {
 
 }
 
+a{
+    text-transform: none;
+}
 
 body {
     padding: 0;
@@ -275,7 +278,6 @@ p.informacionFooter {
     align-items: center;
     justify-content: center;
     width: 80%;
-    padding: 4rem;
     margin: 5rem auto;
     gap: 7rem;
 }
@@ -286,7 +288,6 @@ p.informacionFooter {
     align-items: center;
     justify-content: center;
     width: 80%;
-    padding: 4rem;
     margin: 5rem auto;
     gap: 7rem;
 }
@@ -327,7 +328,7 @@ p.informacionFooter {
 .bienvenida__texto {
     font-family: "Playfair Display", serif;
     font-style: normal;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.5;
     margin-bottom: 3rem;
     color: #000000;
@@ -338,7 +339,7 @@ p.informacionFooter {
 .bienvenida__texto2 {
     font-family: "Playfair Display", serif;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.5;
     color: #000000;
     font-weight: 400;
@@ -582,7 +583,7 @@ p.informacionFooter {
 
 /*  Aqui centramos toda la informacion de la historia */
 .historia__informacion {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
    padding-bottom: 5rem;
 }
@@ -686,85 +687,100 @@ p.informacionFooter {
 
 }
 
-
 .main_card {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    gap: 2rem;
-    width: 70%;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+    gap: 2rem; /* Espacio entre tarjetas */
+    width: 80%; /* Ancho total del contenedor */
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 20px;
     font-family: 'Roboto', sans-serif;
+
+    padding-bottom: 6rem;
 }
 
+@media (max-width: 1200px) {
+    .main_card {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 900px) {
+    .main_card {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 600px) {
+    .main_card {
+        grid-template-columns: 1fr; /* 1 columna por fila en pantallas muy pequeñas */
+    }
+}
 
 .card {
-    width: 40rem;
-    height: 60rem;
+    width: 100%;
+    height: 0;
+    padding-bottom: 157.14%; /* Mantener la proporción 35rem x 55rem */
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
     color: white;
     box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
 
-    img {
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0.9;
-        transition: opacity .2s ease-out;
-    }
+.card img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+}
 
-    h2 {
-        position: absolute;
-        inset: auto auto 30px 30px;
-        margin: 0;
-        transition: inset .3s .3s ease-out;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: normal;
+.card h2 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    margin: 0;
+    transition: bottom .3s .3s ease-out;
+    font-size: 2rem; /* Tamaño de fuente reducido para ajustarse mejor */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
 
-    }
+.card p,
+.card a {
+    position: absolute;
+    opacity: 0;
+    max-width: 90%;
+    transition: opacity .3s ease-out;
+}
 
-    p,
-    a {
-        position: absolute;
-        opacity: 0;
-        max-width: 80%;
-        transition: opacity .3s ease-out;
-    }
+.card p {
+    bottom: 75px;
+    left: 25px;
+    font-size: 1.5rem; /* Ajuste de tamaño de fuente */
+}
 
-    p {
-        inset: auto auto 80px 30px;
-    }
+.card:hover h2 {
+    bottom: 250px;
+    transition: bottom .3s ease-out;
+}
 
-    a {
-        inset: auto auto 40px 30px;
-        color: inherit;
-        text-decoration: none;
-    }
+.card:hover p,
+.card:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
 
-    &:hover h2 {
-        inset: auto auto 220px 30px;
-        transition: inset .3s ease-out;
-    }
-
-    &:hover p,
-    &:hover a {
-        opacity: 1;
-        transition: opacity .5s .1s ease-in;
-    }
-
-    &:hover img {
-        transition: opacity .3s ease-in;
-        opacity: 1;
-    }
-
+.card:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
 }
 
 .material-symbols-outlined {
@@ -800,7 +816,7 @@ p.informacionFooter {
 
 
 .linea__separadora{
-    height: 0.5rem;
+    height: 0.1rem;
     background-color: #000000;
     width: 85%;
     margin: 2rem auto;
@@ -810,7 +826,7 @@ p.informacionFooter {
 .maestria_titulo h2{
     font-family: "Playfair Display", serif;
     font-style: normal;
-    font-size: 10rem;
+    font-size: 8rem;
     line-height: 1;
     margin-bottom: 1rem;
     color: #000000;
@@ -826,7 +842,7 @@ p.informacionFooter {
 
     font-family: "Playfair Display", serif;
     font-style: normal;
-    font-size: 10rem;
+    font-size: 8rem;
     line-height: 1;
     margin-bottom: 1rem;
     color: #000000;
