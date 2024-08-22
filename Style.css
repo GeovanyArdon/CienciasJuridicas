@@ -25,6 +25,7 @@ h1 {
     line-height: 8rem;
     color: #ffffff;
     text-transform: uppercase;
+    text-align: center;
 
 }
 
@@ -581,8 +582,9 @@ p.informacionFooter {
 
 /*  Aqui centramos toda la informacion de la historia */
 .historia__informacion {
-    width: 55%;
+    width: 70%;
     margin: 0 auto;
+   padding-bottom: 5rem;
 }
 
 
@@ -616,7 +618,10 @@ p.informacionFooter {
     /* Separación entre líneas del título */
     margin-bottom: 1rem;
     /* Espacio debajo del título */
+
+    text-transform: none;
 }
+
 
 .historia__mapa {
     background-image: url(Img/mapa.jpg);
@@ -855,4 +860,10 @@ p.informacionFooter {
 
     
 
+}
+
+
+.estructura_ciencias{
+    width: 70%;
+    margin: 0 auto;
 }
