@@ -569,25 +569,208 @@ p.informacionFooter {
 
 
 .historia__imagen {
-    background-image: url(Img/historia.jpg);
-    /* Asegúrate de especificar la ruta correcta a tu imagen */
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 60rem;
     width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("Img/historia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    /* Centra la imagen en el contenedor */
-    position: relative;
-    height: 50rem;
-    margin-bottom: 2rem;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.historia_encabezado{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    gap: 5rem;
+    
+    
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.historia_encabezado h2{
+    color: #ccc;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+
+
+.linea__separadora_blanca{
+    background-color: #cccccc;
+    height: 150%;
+    width: 0.1rem;
 }
 
 /*  Aqui centramos toda la informacion de la historia */
 .historia__informacion {
-    width: 60%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 8rem auto;
    padding-bottom: 5rem;
 }
 
+.historia_padding{
+    width: 60%;
+    margin: 3rem auto;
+    
+}
+
+.historia_encabezado a{
+    display: block;
+    margin: 1.5rem;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin: none;
+    padding: none;
+    color: #ccc;
+    flex-direction: column;
+    font-family: "Playfair Display", serif;
+
+}
+
+/* styles.css */
+.timeline-section {
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 1rem 15px;
+}
+
+.timeline-items {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #000000;
+    left: calc(50% - 1px);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly moved down */
+    animation: appear 1s forwards; /* Trigger animation */
+    animation-timeline: view(); /* Use animation-timeline */
+    animation-range: entry 0% cover 35%; /* Range to trigger animation */
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+    height: 16px;
+    width: 16px;
+    background-color: #000000;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date {
+    font-size: 18px;
+    color: #000000;
+    margin: 6px 0 15px;
+}
+
+.timeline-content {
+    background-color: #2f363e;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* responsive */
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+}
+
+@media (max-width:760px) {
+    .historia_encabezado{
+        grid-template-columns: 100%;
+        margin: 1rem;
+        gap: 0;
+    }
+
+    .historia_encabezado h1{
+        font-size: 3rem;
+    }
+
+    .historia_encabezado h2{
+        font-size: 2rem;
+    }
+
+    .historia_encabezado a{
+        font-size: 2rem
+    }
+
+
+}
 
 /* Aqui hacemos la linea debajo del titulo */
 
