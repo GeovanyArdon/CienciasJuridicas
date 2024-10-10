@@ -26,6 +26,7 @@ h1 {
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
+    
 
 }
 
@@ -302,6 +303,9 @@ p.informacionFooter {
     gap: 7rem;
 }
 
+
+
+
 .bienvenida_informacion_radio {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -319,16 +323,26 @@ p.informacionFooter {
     }
 }
 
-@media (max-width:760px) {
-    .bienvenida_informacion_maestria{
-        grid-template-columns: 90%;
+
+
+@media (max-width: 760px) {
+    .bienvenida_informacion_maestria {
+        grid-template-columns: 90%; /* Una columna única para pantallas pequeñas */
+    }
+
+    .grid-item-1 {
+        grid-area: 2 / 1; /* Mueve el primer ítem a la segunda posición */
+    }
+
+    .grid-item-2 {
+        grid-area: 1 / 1; /* Mueve el segundo ítem a la primera posición */
     }
 }
 
 
 @media (max-width:760px) {
     .bienvenida_informacion_radio{
-        grid-template-columns: 80%;
+        grid-template-columns: 70%;
     }
 }
 
@@ -1111,6 +1125,8 @@ p.informacionFooter {
         line-height: 1.6rem; /* Ajusta la altura de línea para mejor legibilidad */
         margin-bottom: 1rem; /* Añade espacio inferior para separarlos mejor */
     }
+
+    
 }
 
 .OAL{
@@ -1318,6 +1334,11 @@ p.informacionFooter {
     }
 }
 
+.enlace-blanco {
+    color: white;  /* Cambia el color del enlace a blanco */
+    
+}
+
 
 /* Section Styles */
 .requisitos-section {
@@ -1398,4 +1419,9 @@ p.informacionFooter {
 
 .social-icons a:hover {
     transform: scale(1.1);
+}
+
+
+.OAL__titulo h2{
+    text-transform: none;
 }
