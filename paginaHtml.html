@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="Style.css">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -28,71 +29,78 @@
 <body>
 
     <header>
+        
 
-        <div class="contenedor">
-            <a>
-                <img src="Img/uca.jpg" width="300" height="100">
-            </a>
-        </div>
+            <div class="contenedorNav">
+                
+                <a class="logoUca">
+                    <img src="Img/logociencias.png" width="250" height="120">
 
-        <div class="contenedor">
+                </a>
 
-            <nav class="menu">
-                <ul>
-                    <li class="dropdown">
-                        <a href="#quienes-somos">Quiénes Somos</a>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li>
-                                    <a href="#bienvenida">Bienvenida</a>
-                                </li>
-                                <li>
-                                    <a href="#historia">Historia</a>
-                                </li>
-                                <li>
-                                    <a href="#organigrama">Organigrama</a>
-                                </li>
-                                <li>
-                                    <a href="#perfiles">Perfiles</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                
+
+                <div class="contenedor">
+
+                    <nav class="menu">
+                        <ul>
+                            <li class="dropdown">
+                                <a href="#quienes-somos">Quiénes Somos</a>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <a href="#bienvenida">Bienvenida</a>
+                                        </li>
+                                        <li>
+                                            <a href="#historia">Historia</a>
+                                        </li>
+                                        <li>
+                                            <a href="#organigrama">Organigrama</a>
+                                        </li>
+                                        <li>
+                                            <a href="#perfiles">Perfiles</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
 
 
-                    <li class="dropdown">
-                        <a href="#oferta-academica">Oferta académica</a>
+                            <li class="dropdown">
+                                <a href="#oferta-academica">Oferta académica</a>
 
-                        <div class="dropdown-content">
-                            <ul>
-                                <li>
-                                    <a href="#licenciaturas"
-                                        onclick="window.location.href = 'https://uca.edu.sv/carrera/licenciatura-en-ciencias-juridicas-presencial/';">Licenciaturas</a>
-                                </li>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <a href="#licenciaturas"
+                                                onclick="window.location.href = 'https://uca.edu.sv/carrera/licenciatura-en-ciencias-juridicas-presencial/';">Licenciaturas</a>
+                                        </li>
 
-                                <li>
-                                    <a href="#maestria">Maestrias</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#diplomadosycursos">Diplomados y Cursos</a>
-                    </li>
-                    <li>
-                        <a href="#eventos">Eventos</a>
-                    </li>
-                    <li>
-                        <a href="#programaradio">Programa de Radio</a>
-                    </li>
-                    <li>
-                        <a href="#oal">OAL</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                                        <li>
+                                            <a href="#maestria">Maestrias</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#diplomadosycursos">Diplomados y Cursos</a>
+                            </li>
+                            <li>
+                                <a href="#eventos">Eventos</a>
+                            </li>
+                            <li>
+                                <a href="#programaradio">Programa de Radio</a>
+                            </li>
+                            <li>
+                                <a href="#oal">OAL</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+
+    
     </header>
-
 
     <div class="imagenInicio">
 
@@ -114,28 +122,27 @@
                 <div class="texto">
 
                     <p class="bienvenida__texto">
-                        "Bienvenidos al departamento de ciencias jurídicas de nuestra universidad."
+                        "Bienvenidos al sitio web del Departamento de Ciencias Jurídicas."
                     </p>
-
+                    
                     <p class="bienvenida__texto2">
                         Es un placer darles la bienvenida a nuestro nuevo sitio web, diseñado para servir como una
                         puerta de entrada a todo lo
                         que ofrecemos en nuestro departamento.
-                        <br> <br>
-                        En este espacio virtual, encontrarán información detallada sobre quiénes somos; nuestros
-                        programas académicos; nuestro distinguido cuerpo docente; las actividades extracurriculares y
+                        <br><br>
+                        En este espacio virtual, encontrarán información detallada sobre quiénes somos, nuestros
+                        programas académicos, nuestro distinguido cuerpo docente, las actividades extracurriculares y
                         oportunidades de investigación, así como los recursos y servicios disponibles para nuestros
-                        estudiantes. Y, en general, cualquier noticia de relevancia para la comunidad estudiantil;
-                        incluso, para los profesionales del derecho.<br> <br>
-
+                        estudiantes. También encontrarán noticias de relevancia para la comunidad estudiantil y
+                        para los profesionales del derecho.
+                        <br><br>
                         A través de este sitio web, esperamos fortalecer nuestra comunidad académica y brindarles a
                         todos una experiencia enriquecedora e informativa. Los invitamos a explorar cada rincón de
                         nuestro sitio y descubrir todo lo que el Departamento de Ciencias Jurídicas tiene para ofrecer.
-
+                        <br><br>
                         ¡Bienvenidos!
-
-
                     </p>
+                    
 
 
 
@@ -364,7 +371,7 @@
 
             <div>
                 <div>
-                    <img class="organigrama__imagen" src="img/organigrama.png" alt="ImagenOrganigrama">
+                    <img class="organigrama__imagen" src="img/Organi.png" alt="ImagenOrganigrama">
                 </div>
             </div>
 
@@ -379,7 +386,7 @@
 
         <div class="eventos_titulo" id="perfiles">
             <h2>
-                Perfiles Personales
+                Perfiles personales
             </h2>
         </div>
 
@@ -552,7 +559,7 @@
 
         <div class="maestria_titulo" id="maestria">
             <h2>
-                Maestrias
+                Maestrías
             </h2>
         </div>
 
