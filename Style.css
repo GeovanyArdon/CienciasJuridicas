@@ -1502,3 +1502,7 @@ header {
 .OAL__titulo h2 {
     text-transform: none;
 }
+
+li{
+    text-transform: none;
+}
