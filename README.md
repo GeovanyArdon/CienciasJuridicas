@@ -1,2 +1,2 @@
 # CienciasJuridicas
-Poryecto Ciencias Juridicas UCA
+Proyecto Ciencias Juridicas UCA
